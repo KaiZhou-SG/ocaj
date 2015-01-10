@@ -1,0 +1,13 @@
+1 Java basics
+  1.2 The structure of a Java class
+    >> components of a Java class
+      a) package statements
+      b) import statements
+      c) class declarations(a file can contain only 1 public class)
+      d) comments(// and /**/, reference to java-code-conventions)
+      e) Class variables(static first, public->procted->package->private
+      f) methods(groupbed by functionalities)
+    >> the signature of the main method as the entrance of the executable:
+      a) public static void main (String [] args) 
+      b) make use of the args as arguments when executing the application
+    
