@@ -1,4 +1,19 @@
 1 Java basics
+  1.1 The structure of a Java application:
+    project
+    ..packageA
+    ....java fileA
+    ......public class fileA
+    ......private class anyClassName
+    ......pricate class anyClassName2
+    ....java fileB
+    ......public class fileB
+    ......private class anyClassName
+    ......private class anyClassName2
+    ..packageB
+    ....java fileC
+    ....java fileD
+    
   1.2 The structure of a Java class
     >> components of a Java class
       a) package statements
@@ -7,7 +22,38 @@
       d) comments(// and /**/, reference to java-code-conventions)
       e) Class variables(static first, public->procted->package->private
       f) methods(groupbed by functionalities)
+    >> the package statements
+      a) package represents the structure of the project directories, indicatingthat where is the current .java file put
+         All java classes are port of a package. A java class can be explicitly
+defined in a named package; otherwise it becomes part of a default package, whi
+ch does not have a name.
+        A package statement is used to explicitly define which package a class
+is in. If a class includes a package statement, it must be the first statement
+in the class definitioni(not the first line, the first line usually is a comm
+ent)
+        If there is a package statement, it must appear exactly only once in a 
+class file.
+      b) e.g.if there is this package statemetns:
+         package com.kaizhousoft.MyPackage
+         that means the current .java file(containing this statement) is placed
+         at /com/kaizhousoft/MyPackage directory
+      c) and to executing the class file:
+         --> $ java com.kaizhousoft.MyPackage.ClassName, without .class suffix
     >> the signature of the main method as the entrance of the executable:
       a) public static void main (String [] args) 
       b) make use of the args as arguments when executing the application
-    
+      c) a sample execute of java application with args:
+         --> $ java MyApp Zhou Kai
+         the above sample passes two strings, Zhou and Kai as args, notice that
+         we don't need double quotes
+    >> the import statements
+      a) understand packages
+      b) the import statements:
+         import java.lang.*;
+    >> access modifiers
+      public : can be accessed through inner class and outside class and sub-class
+      protected : can be accessed through inner class and sub-classes
+      default(package) : can be accessed through files within the same directory
+      private : can only be accessed within the class itself
+    >> Use abstract classes and interfaces
+    >> Apply the static keyword to methods and fields
